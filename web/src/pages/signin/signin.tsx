@@ -7,6 +7,7 @@ const Signin = () => {
     const [email, setEmail] = useState("")
     const [senha, setSenha] = useState("")
 
+
     const usuario = { email, senha }
     console.log(usuario)
 
@@ -20,7 +21,7 @@ const Signin = () => {
             <div id="container">
                 <header>
                     <img src={logo} alt="" />
-                    <h1>Ordinis</h1>
+                    <h1>ORDINIS</h1>
                 </header>
                 <form className="login">
                     <div className="inputContainer">
@@ -43,7 +44,7 @@ const Signin = () => {
                     </div>
                 </form>
                 <button>Entrar</button>
-                <p><a href="#">Não consegue entrar? Clique aqui</a></p>
+                <p><a href="#">Não consegue entrar? Clique aqui!</a></p>
             </div>
         </section>
     )

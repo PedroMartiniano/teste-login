@@ -4,6 +4,8 @@
   --cor00: #31394e;
   --cor01: #dce1eb;
   --cor02: #3146d0;
+  --cor03: #a4b0c3;
+  --cor04: #4f63d7;
   --fonte-titulo: 'Roboto Mono', Arial, sans-serif;
 }
 
@@ -44,7 +46,7 @@ header > h1 {
   font-size: 2.2em;
   margin-top: -15px;
   padding-bottom: 22px;
-  background-image: linear-gradient(to right, white, rgb(114, 114, 114));
+  background-image: linear-gradient(to right, white, rgb(134, 134, 134));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -58,10 +60,10 @@ input {
 }
 
 button {
-  background-color: var(--cor02);
+  background-color: var(--cor04);
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.2em;
-  font-weight: 600;
+  font-size: 1.25em;
+  font-weight: 500;
   margin-top: 10px;
   margin-bottom: 10px;
   width: 140px;
@@ -76,9 +78,12 @@ button:hover {
 }
 
 p > a{
+  font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
-  background-image: linear-gradient(to right, white, rgb(158, 158, 158));
+  background-color: #a4b0c3;
+  /* background-image: linear-gradient(to right, white, rgb(194, 194, 194)); */
   background-clip: text;
+  font-size: 0.9em;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
