@@ -43,7 +43,7 @@ const Signin = () => {
                         />
                     </div>
                 </form>
-                <button>Entrar</button>
+                <button type="submit">Entrar</button>
                 <p><a href="#">Não consegue entrar? Clique aqui!</a></p>
             </div>
         </section>

@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&family=Sriracha&display=swap');
 
 :root {
-  --cor00: #31394e;
+  --cor00: #424d67;
   --cor01: #dce1eb;
   --cor02: #3146d0;
   --cor03: #a4b0c3;
   --cor04: #4f63d7;
+  --cor05: #677bec;
   --fonte-titulo: 'Roboto Mono', Arial, sans-serif;
 }
 
@@ -54,13 +55,13 @@ header > h1 {
 
 input {
   margin: 15px;
-  padding: 10px;
+  padding: 14px;
   border-radius: 15px;
   width: 330px;
 }
 
 button {
-  background-color: var(--cor04);
+  background-color: var(--cor05);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.25em;
   font-weight: 500;
@@ -69,23 +70,23 @@ button {
   width: 140px;
   padding: 10px;
   border-radius: 15px;
+  border: 2px solid rgba(134, 134, 134, 0);
+  box-shadow: 1px 1px rgba(0, 0, 0, 0.144);  
 }
 
 button:hover {
-  border: 2px solid black;
+  transition: 0.3s;
+  border: 2px solid rgba(0, 0, 0, 0.215);
   cursor: pointer;
-  font-weight: bold;
+  background-color: var(--cor04);
 }
 
 p > a{
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
-  background-color: #a4b0c3;
-  /* background-image: linear-gradient(to right, white, rgb(194, 194, 194)); */
+  color: #a4b0c3;
   background-clip: text;
   font-size: 0.9em;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 p > a:hover {
