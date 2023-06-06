@@ -1,20 +1,39 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import "./signin.css";
 import logo from '../../images/logo-marca.svg'
 import api from "../../lib/axios";
+import { User } from "../../models/userData";
 
 const Signin = () => {
     const [email, setEmail] = useState("")
     const [senha, setSenha] = useState("")
-
+    const [dataUser, setDataUser] = useState<User[]>([])
+    const [isAuthenticated, setIsAuthenticated] = useState(false)
 
     const usuario = { email, senha }
-    console.log(usuario)
 
-    const users = api.get("/users")
-    console.log(users)
+    const getUsers = useCallback(() => {
+        api.get('/users').then((response) => { setDataUser(response.data); });
+    }, []);
 
+    useEffect(() => { getUsers() }, [getUsers])
 
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault()
+
+        let verif = false
+        for (let i = 0; i < dataUser.length; i++) {
+            if (usuario.email === dataUser[i].email && usuario.senha === dataUser[i].senha) {
+                verif = true
+                break
+            }
+        }
+        setIsAuthenticated(verif)
+        console.log(verif)
+        console.log(dataUser)
+        console.log(usuario)
+        console.log(isAuthenticated)
+    }
 
     return (
         <section>
@@ -23,7 +42,7 @@ const Signin = () => {
                     <img src={logo} alt="" />
                     <h1>ORDINIS</h1>
                 </header>
-                <form className="login">
+                <form className="login" onSubmit={handleSubmit}>
                     <div className="inputContainer">
                         <input
                             type="email"
@@ -42,12 +61,12 @@ const Signin = () => {
                             onChange={(change) => setSenha(change.target.value)}
                         />
                     </div>
+                    <button type="submit">Entrar</button>
                 </form>
-                <button type="submit">Entrar</button>
                 <p><a href="#">Não consegue entrar? Clique aqui!</a></p>
             </div>
         </section>
     )
 }
 
-export default Signin
+export default Signin;

@@ -75,9 +75,11 @@ button {
 }
 
 button:hover {
-  transition: 0.3s;
-  border: 2px solid rgba(0, 0, 0, 0.215);
   cursor: pointer;
+}
+
+button:active {
+  border: 2px solid rgba(0, 0, 0, 0.215);
   background-color: var(--cor04);
 }
 
