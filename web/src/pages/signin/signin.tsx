@@ -8,7 +8,7 @@ const Signin = () => {
     const [email, setEmail] = useState("")
     const [senha, setSenha] = useState("")
     const [dataUser, setDataUser] = useState<User[]>([])
-    const [isAuthenticated, setIsAuthenticated] = useState(false)
+    const [isAuthenticated, setIsAuthenticated] = useState(Boolean)
 
     const usuario = { email, senha }
 
@@ -29,10 +29,10 @@ const Signin = () => {
             }
         }
         setIsAuthenticated(verif)
-        console.log(verif)
+        console.log("verif: " + verif)
+        console.log("isAuthenticated: " + isAuthenticated)
         console.log(dataUser)
         console.log(usuario)
-        console.log(isAuthenticated)
     }
 
     return (
