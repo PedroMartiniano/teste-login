@@ -30,6 +30,7 @@ section {
 }
 
 div#container {
+  position: absolute;
   width: 480px;
   height: 470px;
   background-color: var(--cor00);
@@ -37,6 +38,8 @@ div#container {
   border-radius: 30px;
   text-align: center;
 }
+
+
 
 header > img {
   padding-top: 40px;
