@@ -1,9 +1,21 @@
-import { BrowserRouter, Route, Routes, } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import Signin from "./pages/signin/signin";
 import Home from "./pages/home/home";
 
+// const PrivateRoute = ({ element, isAuthenticated, ...props }) => {
+//     return isAuthenticated ? (
+//       <Route {...props} element={element} />
+//     ) : (
+//       <Navigate to="/signin" replace />
+//     );
+//   };
 
 const RoutesWeb = () => {
+    // const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+    // const updateIsAuthenticated = useCallback((value) => {
+    //     setIsAuthenticated(value);
+    //   }, []);
 
     return (
         <BrowserRouter>

@@ -29,7 +29,7 @@ const Signin = () => {
                 break
             }
         }
-        setIsAuthenticated(verif)        
+        setIsAuthenticated(verif)
     }
 
     return (
