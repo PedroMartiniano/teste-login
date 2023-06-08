@@ -9,6 +9,7 @@ import RoutesWeb from "../../routes";
 
 // classe principal de login 
 const Signin = () => {
+
     // criação de variaveis de estado 
     const [email, setEmail] = useState("")
     const [senha, setSenha] = useState("")
@@ -31,19 +32,16 @@ const Signin = () => {
         event.preventDefault()
 
         let verif = false
-        for (let i = 0; i < dataUser.length; i++) {
-            if (usuario.email === dataUser[i].email && usuario.senha === dataUser[i].senha) {
-                verif = true
-                break
-            }
-        }
+        dataUser.map((user) => {
+            (usuario.email === user.email && usuario.senha === user.senha) && (verif = true)
+        });
         setIsAuthenticated(verif)
     }
-    
+
     // verificação da variavel isAuthenticated para redirecionar o usuário para a pagina home
-    (isAuthenticated) 
-    ? window.open('/home', "_self") // ? window.location.replace('/home')
-    : console.log("Não autenticado")
+    (isAuthenticated)
+        ? window.open('/home', "_self") // ? window.location.replace('/home')
+        : console.log("Não autenticado")
 
     // retorno do html 
     return (
@@ -80,4 +78,5 @@ const Signin = () => {
     )
 }
 
+// exportação da classe signin
 export default Signin;
