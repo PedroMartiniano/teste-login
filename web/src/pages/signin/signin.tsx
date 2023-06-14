@@ -1,11 +1,9 @@
 //importações
 import { useState, useEffect, useCallback } from "react";
-import { redirect } from "react-router-dom";
 import "./signin.css";
 import logo from '../../images/logo-marca.svg'
 import api from "../../lib/axios";
 import { User } from "../../models/userData";
-import RoutesWeb from "../../routes";
 
 // classe principal de login 
 const Signin = () => {

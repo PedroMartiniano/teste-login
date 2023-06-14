@@ -17,6 +17,9 @@
 
 body {
   background-color: var(--cor01);
+  background-image: url(../../images/Vector_10.svg), url(../../images/Vector_9.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: left bottom, right top;
 }
 
 section {
@@ -24,8 +27,8 @@ section {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 99vw;
-  height: 99vh;
+  width: 100vw;
+  height: 100vh;
   margin: auto;
 }
 
